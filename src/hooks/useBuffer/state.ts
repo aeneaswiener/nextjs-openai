@@ -28,6 +28,7 @@ export const streamState = (prevState: State, action: Action) => {
       return {
         ...prevState,
         aborted: false,
+        done: false,
         buffer: [],
         refreshCount: prevState.refreshCount + 1,
         controller: new AbortController(),
